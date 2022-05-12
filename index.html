@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Addresses</title>
+    <style>
+      body {
+        font: 0.75em/1.5 sans-serif;
+        color: #333;
+        background-color: #fff;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      table {
+        margin-bottom: 1em;
+        border-collapse: collapse;
+      }
+
+      th {
+        font-weight: bold;
+        background-color: #dddccc;
+      }
+      th,
+      td {
+        padding: 0.5em;
+        width: 20vw;
+        border: 1px solid #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>IP addresses:</h1>
+    <table>
+      <tr>
+        <th>IP</th>
+        <th>Time</th>
+      </tr>
+      <% for(var i=0; i < logs.length; i++) { %>
+      <tr>
+        <td><%= logs[i].ip %></td>
+        <td>
+          <%= new Date(logs[i].timestamp).toLocaleString("en-US", { timeZone:
+          "America/New_York", }) %>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
