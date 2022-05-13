@@ -11,9 +11,6 @@ const port = process.env.PORT || 5000;
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
-app.use(express.urlencoded());
-app.use(express.json());
-
 app.get("/", async (req, res) => {
   const url =
     "mongodb+srv://NOT_MY_USERNAME:NOT_MY_PASSWORD@NOT_MY_DB.knkja.mongodb.net/DB?retryWrites=true&w=majority";
