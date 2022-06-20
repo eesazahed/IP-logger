@@ -28,4 +28,4 @@ app.use(async (req, res) => {
   res.render("index", { logs: findResult });
 });
 
-app.listen(port, console.log(`Running on http://localhost/${port}`));
+app.listen(port, console.log(`Running on http://localhost:${port}`));
