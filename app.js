@@ -15,7 +15,7 @@ app.use(async (req, res) => {
 
   await client.connect();
 
-  const col = client.db("IP_LOGGER").collection("logs");
+  const col = client.db("DB").collection("logs");
   const findResult = await col.find({}).toArray();
 
   findResult.sort((a, b) => parseFloat(b.timestamp) - parseFloat(a.timestamp));
